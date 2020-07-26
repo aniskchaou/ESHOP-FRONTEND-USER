@@ -20,8 +20,8 @@ export class ProductService{
     return this.httpClient.get<Product>(url);
   }
 
-  private baseUrl='http://localhost:8080/products';
-  private baseCategoriesUrl='http://localhost:8080/categories';
+  private baseUrl='https://e-commerce-springboot-backend.herokuapp.com/products';
+  private baseCategoriesUrl='https://e-commerce-springboot-backend.herokuapp.com/categories';
   getCategories(): Observable<Category[]> {
     return this.httpClient.get<GetResponseCategory>(this.baseCategoriesUrl).pipe(
       map(response => response._embedded.categories)
