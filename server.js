@@ -24,7 +24,7 @@ app.get('/', function(req,res,next) {
 
     // Pass to next layer of middleware
     next();
-  res.sendFile(path.join(__dirname + '/dist/cinemas/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/ecommerce-angular/index.html'));
 });
 // Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 8080);
