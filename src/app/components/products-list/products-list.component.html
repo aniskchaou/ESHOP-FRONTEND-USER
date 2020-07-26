@@ -1,20 +1,18 @@
-<table>
-<thead>
-  <td>Image</td>
-  <td>Name</td>
-  <td>Price</td>
-  <td>Units in stock</td>
-</thead>
-<tbody>
-  <tr *ngFor="let p of products">
-     <td><img src="{{p.imageUrl}}" height="50" width="50"  /></td>
-     <td>{{p.name}}</td>
-     <td>{{p.unitPrice}}</td>
-     <td>{{p.unitsInStock}}</td>
-
-  </tr>
-
-</tbody>
-</table>
-
-
+<div class="row">
+  <div class="col-md-3" *ngFor="let p of products">
+    <div class="product-box">
+      <a routerLink="/products/{{p.id}}">
+        <img src="assets/images/products/placeholder.png" class="img-responsive">
+      </a><br>
+      <a href="product-detail.html">
+        <h1>{{p.name}}</h1>
+      </a>
+      <h2>Duis aute irure dolor in reprehenderit in voluptate </h2>
+      <div class="price">{{p.unitPrice}} $</div>
+      <a (click)="addToCart(p)" class="primary-btn">Add to cart</a>
+    </div>
+  </div>
+  <div *ngIf="products?.length==0" class="alert alert-warning col-md-12" role="alert">
+    No products found.
+  </div>
+</div>

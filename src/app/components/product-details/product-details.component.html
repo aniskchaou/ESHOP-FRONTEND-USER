@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+
+      <div>
+          <img src="assets/images/products/placeholder.png" class="img-responsive" width="200px">
+
+          <h3>{{product.name}}</h3>
+          <div class="price">$ {{product.unitPrice}}</div>
+          <a (click)="addToCart(product.id)" class="primary-btn">Add to cart</a>
+
+        
+          <p>{{product.description}}
+          </p>
+
+          <a routerLink="/products">Back to Product List</a>
+      </div>
+  </div>
+</div>
