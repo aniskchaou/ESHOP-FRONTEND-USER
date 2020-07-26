@@ -2,24 +2,24 @@
         <div *ngIf="cartItems.length==0" class="alert alert-info col-md-12" role="alert" >Your shopping cart is empty.</div>
       <table class="table table-bordered" *ngIf="cartItems.length>0">
         <tr>
-          <th>Image</th>
-          <th>Detail</th>
           <th></th>
+          <th>Details</th>
+          <th>Quantity</th>
         </tr>
         <tr *ngFor="let tempCartItem of cartItems">
           <td><img src="{{tempCartItem.imageUrl}}" width="150" height="150" /></td>
           <td>
-            <p>{{tempCartItem.name}}</p>
-            <p>{{tempCartItem.unitPrice}}</p>
+            <p>{{tempCartItem.name}}
+            ( {{tempCartItem.unitPrice}} $ )</p>
           </td>
           <td>
             <div class="items">
-              <label>quantity</label>
-              <div class="row no-gutters">
+              
+              <div class="row no-gutters" style="text-align:center;">
                 <div class="col">
                   <button (click)="incrementQuantity(tempCartItem)" class="btn btn-primary">+</button>
                 </div>
-                <div class="col">{{tempCartItem.quantity}}</div>
+                <div class="col"> <b> {{tempCartItem.quantity}}</b></div>
                 <div class="col">
                     <button (click)="decrementQuantity(tempCartItem)" class="btn btn-primary">-</button>
                   </div>
@@ -27,17 +27,18 @@
               
              
              
-              <p> {{tempCartItem.quantity*tempCartItem.unitPrice}} $</p>
+              <p style="text-align:center;" ><b>{{tempCartItem.quantity*tempCartItem.unitPrice}} $</b></p>
             </div>
           </td>
         </tr>
         <tr>
           <td colspan="2"></td>
-          <td>
+          <td><b>
             <p>Quantity : {{totalQuantity}}</p>
             <p>Shipping : FREE</p>
-            <p>Total : {{totalPrice}} $</p>
-            <p><button routerLink="/checkout">CheckOut</button></p>
+            <p>Total : {{totalPrice}} $</p></b>
+            <p><button class="btn btn-success" routerLink="/checkout">Checkout</button></p>
+          
           </td>
         </tr>
       </table>
