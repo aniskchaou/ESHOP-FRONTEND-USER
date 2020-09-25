@@ -1,21 +1,31 @@
 <div class="row">
+
+  <!-- list of products -->
   <div class="col-md-3" *ngFor="let p of products">
     <div class="product-box">
-      <a routerLink="/products/{{p.id}}">
-        <img src="{{p.imageUrl}}" class="img-responsive">
-      </a><br>
-      <a routerLink="/products/{{p.id}}">
-        <h1>{{p.name}}</h1>
+      <a routerLink="/products/{{ p.id }}">
+        <img src="{{ p.imageUrl }}" class="img-responsive" /> </a
+      ><br />
+      <a routerLink="/products/{{ p.id }}">
+        <h1>{{ p.name }}</h1>
       </a>
-      
-      <div class="price">{{p.unitPrice}} $</div>
+
+      <div class="price">{{ p.unitPrice }} $</div>
       <a (click)="addToCart(p)" class="primary-btn">Add to cart</a>
     </div>
   </div>
-  <div *ngIf="products?.length==0" class="alert alert-warning col-md-12" role="alert">
+
+  <!--empty -->
+  <div
+    *ngIf="products?.length == 0"
+    class="alert alert-warning col-md-12"
+    role="alert"
+  >
     No products found.
   </div>
+
+  <!--loading -->
   <div *ngIf="!products">
-      <img src="assets/loading.gif"  height="100" width="100"/>
-    </div>
+    <img src="assets/loading.gif" height="100" width="100" />
+  </div>
 </div>

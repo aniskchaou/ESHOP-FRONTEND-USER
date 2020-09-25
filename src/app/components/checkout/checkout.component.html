@@ -1,7 +1,7 @@
 
             <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
 
-                <!-- customer form group -->
+             
                 <div formGroupName="customer" class="form-area">
                     <h3>Customer</h3>
 
@@ -89,7 +89,7 @@
 
                 </div>
 
-                <!-- Add check box to copy shipping to billing -->
+                
                 <div class="input-space">
                     <label class="au-checkbox">
                         <input type="checkbox" (change)="copyShippingAddressToBillingAddress($event)">
@@ -98,7 +98,7 @@
                 </div>
 
 
-                <!-- Billing Address -->
+                
                 <div formGroupName="billingAddress" class="form-area">
                     <h3>Billing Address</h3>
 
@@ -236,7 +236,7 @@
                 </div>
 
                
-                <!-- submit button-->
+               
                 <div class="text-center">
                     <button type="submit" class="btn btn-info">Purchase</button>
                 </div>

@@ -20,6 +20,7 @@ export class ProductDetailsComponent implements OnInit {
       this.getProductDetails();
     });
   }
+
   getProductDetails(){
     const productId:number =+this.route.snapshot.paramMap.get('id');
      
@@ -31,8 +32,6 @@ export class ProductDetailsComponent implements OnInit {
 
   addToCart(product:Product)
   {
-    console.log(product);
-
     const theCartItem=new CartItem(product)
     this.cartService.addToCart(theCartItem);
   }

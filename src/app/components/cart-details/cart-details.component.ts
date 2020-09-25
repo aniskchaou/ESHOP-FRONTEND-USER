@@ -12,11 +12,14 @@ export class CartDetailsComponent implements OnInit {
   cartItems:CartItem[]=[]
   totalPrice:number=0
   totalQuantity:number=0
+
+
   constructor(private cartService:CartService) { }
 
   ngOnInit() {
     this.listCartDetails()
   }
+
   listCartDetails() {
     this.cartItems=this.cartService.cartItem;
 
@@ -27,14 +30,13 @@ export class CartDetailsComponent implements OnInit {
     this.cartService.totalQuantity.subscribe(data=>{
       this.totalQuantity=data
     })
+
     this.cartService.computeCartTotal()
 
   }
 
   incrementQuantity(product:Product)
   {
-    console.log(product);
-
     const theCartItem=new CartItem(product)
     this.cartService.addToCart(theCartItem);
   }

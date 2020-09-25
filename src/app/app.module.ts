@@ -1,4 +1,4 @@
-import { CheckoutComponent } from './checkout/checkout.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ProductService } from './services/product-service.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,18 +18,21 @@ import { CartDetailsComponent } from './components/cart-details/cart-details.com
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
 
+//routes
 const routes:Routes=[
   {path:'search/:keyword',component:ProductsListComponent},
   {path:'checkout',component:CheckoutComponent},
   {path:'cart-details',component:CartDetailsComponent},
   {path:'products/:id',component:ProductDetailsComponent},
   {path:'category/:id',component:ProductsListComponent},
-{path:'category',component:ProductsListComponent},
-{path:'products',component:ProductsListComponent},
-{path:'',redirectTo:'/products',pathMatch:'full'},
-{path:'**',redirectTo:'/products',pathMatch:'full'}]
+  {path:'category',component:ProductsListComponent},
+  {path:'products',component:ProductsListComponent},
+  {path:'',redirectTo:'/products',pathMatch:'full'},
+  {path:'**',redirectTo:'/products',pathMatch:'full'}]
+
+
 @NgModule({
-  declarations: [
+  declarations: [//components
     AppComponent,
     ProductsListComponent,
     CategoryMenuComponent,
@@ -39,7 +42,7 @@ const routes:Routes=[
     CheckoutComponent,
     SearchComponent
   ],
-  imports: [
+  imports: [ //modules
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
@@ -49,7 +52,10 @@ const routes:Routes=[
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [ProductService],
+   providers: [ProductService],
   bootstrap: [AppComponent]
 })
+
+
+
 export class AppModule { }

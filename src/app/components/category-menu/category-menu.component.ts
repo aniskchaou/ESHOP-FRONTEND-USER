@@ -7,6 +7,8 @@ import { ProductService } from '../../services/product-service.service';
   templateUrl: './category-menu.component.html',
   styleUrls: ['./category-menu.component.css']
 })
+
+
 export class CategoryMenuComponent implements OnInit {
 
   categories:Category[]
@@ -15,10 +17,10 @@ export class CategoryMenuComponent implements OnInit {
   ngOnInit() {
     this.listProductCategories();
   }
+
   listProductCategories(): any {
    this.productService.getCategories().subscribe(data=>{
       this.categories=data;
-      console.log(data);
    });
   }
 
