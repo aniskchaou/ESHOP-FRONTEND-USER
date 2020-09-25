@@ -23,6 +23,8 @@ The objective of this project is developing a simple e-commerce web application.
 <img src="architecture.png" />
 </p>
 <br>
+
+
 ## Technologies
 
 Spring boot, Angular, Bootstrap, PostgresSQL
