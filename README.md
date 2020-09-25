@@ -2,6 +2,9 @@
 <p align="center">
 <img src="intro.jpg" />
 </p>
+<br>
+
+
 ## Description
 
 The objective of this project is developing a simple e-commerce web application.
@@ -19,6 +22,7 @@ The objective of this project is developing a simple e-commerce web application.
 <p align="center">
 <img src="architecture.png" />
 </p>
+<br>
 ## Technologies
 
 Spring boot, Angular, Bootstrap, PostgresSQL
