@@ -15,6 +15,7 @@ export class CartStatusComponent implements OnInit {
 
   ngOnInit() {
     this.updateCartStatus()
+    console.log(this.totalQuantity);
   }
 
 

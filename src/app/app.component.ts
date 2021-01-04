@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Routes,RouterModule} from '@angular/router';
+import {Routes,RouterModule, Router} from '@angular/router';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 @Component({
   selector: 'app-root',
@@ -9,4 +9,5 @@ import { ProductsListComponent } from './components/products-list/products-list.
 
 export class AppComponent {
   title = 'ecommerce-angular';
+
 }

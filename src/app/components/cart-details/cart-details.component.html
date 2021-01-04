@@ -1,14 +1,13 @@
 <!-- if cart is empty -->
-<div
+<h2
   *ngIf="cartItems.length == 0"
-  class="alert alert-info col-md-12"
-  role="alert"
+  
 >
   Your shopping cart is empty.
-</div>
+</h2>
 
 
-
+<!--
 <table class="table table-bordered" *ngIf="cartItems.length > 0">
 
   <tr>
@@ -68,3 +67,93 @@
     </td>
   </tr>
 </table>
+-->
+<div class="shopping-cart section"  *ngIf="cartItems.length > 0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <!-- Shopping Summery -->
+        <table class="table shopping-summery">
+          <thead>
+            <tr class="main-hading">
+              <th>PRODUCT</th>
+              <th>NAME</th>
+              <th class="text-center">UNIT PRICE</th>
+              <th class="text-center">QUANTITY</th>
+              <th class="text-center">TOTAL</th> 
+              <th class="text-center"><i class="ti-trash remove-icon"></i></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tempCartItem of cartItems">
+              <td class="image" data-title="No"><img src="{{ tempCartItem.imageUrl }}" alt="#"></td>
+              <td class="product-des" data-title="Description">
+                <p class="product-name"><a routerLink="/products/{{ tempCartItem.id }}">{{ tempCartItem.name }}</a></p>
+              </td>
+              <td class="price" data-title="Price"><span>${{ tempCartItem.unitPrice }} </span></td>
+              <td class="qty" data-title="Qty"><!-- Input Order -->
+                <div class="input-group">
+                  <div class="button minus">
+                    <button (click)="decrementQuantity(tempCartItem)" type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                      <i class="ti-minus"></i>
+                    </button>
+                  </div>
+                  <input type="text" name="quant[1]" class="input-number" data-min="1" data-max="100" value="{{ tempCartItem.quantity }}">
+                  <div class="button plus">
+                    <button  (click)="incrementQuantity(tempCartItem)" type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
+                      <i class="ti-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <!--/ End Input Order -->
+              </td>
+              <td class="total-amount" data-title="Total"><span>${{ tempCartItem.quantity * tempCartItem.unitPrice }}</span></td>
+              <td class="action" data-title="Remove"><a href="#"><i class="ti-trash remove-icon"></i></a></td>
+            </tr>
+        
+           
+          </tbody>
+        </table>
+        <!--/ End Shopping Summery -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <!-- Total Amount -->
+        <div class="total-amount">
+          <div class="row">
+            <div class="col-lg-8 col-md-5 col-12">
+              <div class="left">
+                <div class="coupon">
+                  <form action="#" target="_blank">
+                    <input name="Coupon" placeholder="Enter Your Coupon">
+                    <button class="btn">Apply</button>
+                  </form>
+                </div>
+                <div class="checkbox">
+                  <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox"> Shipping (+10$)</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-7 col-12">
+              <div class="right">
+                <ul>
+                  <li>Cart Subtotal<span>${{ totalPrice }}</span></li>
+                  <li>Shipping<span>Free</span></li>
+                  <li>You Save<span>$20.00</span></li>
+                  <li class="last">You Pay<span>${{ totalPrice }}</span></li>
+                </ul>
+                <div class="button5">
+                  <a routerLink="/checkout" class="btn">Checkout</a>
+                  <a routerLink="/" class="btn">Continue shopping</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ End Total Amount -->
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,8 +1,8 @@
+<!--
 <div class="page-wrapper">
 
 
 
-		<!-- MENU SIDEBAR-->
 		<aside class="menu-sidebar d-none d-lg-block">
 			<div class="logo">
 				<a routerLink="/">
@@ -10,55 +10,55 @@
 				</a>
 			</div>
 			<div class="menu-sidebar-content js-scrollbar1">
-				  <!-- Categories -->
+				  
                   <app-category-menu></app-category-menu>
 			</div>
 		</aside>
-		<!-- END MENU SIDEBAR-->
+		
 
 
 
 
-		<!-- PAGE CONTAINER-->
+		
 		<div class="page-container">
 
 
 
-			<!-- HEADER DESKTOP-->
+			
 			<header class="header-desktop">
 				<div class="section-content section-content-p30">
 					<div class="container-fluid">
 						<div class="header-wrap">
-						   <!-- search bar -->
+						
 						   <app-search></app-search>
-						   <!--cart status-->
+						   
 	                       <cart-status></cart-status>
 						</div>
 						<div class="account-wrap"></div>
 					</div>
 				</div>
 			</header>
-			<!-- END HEADER DESKTOP-->
+			
 
 
 
 
-			<!-- MAIN CONTENT-->
+	
 			<div class="main-content">
 				<div class="section-content section-content-p30">
 					<div class="container-fluid">
-                            <!-- CONTENT-->
+                
 							<router-outlet></router-outlet>
 					</div>
 				</div>
 			</div>
-			<!-- END MAIN CONTENT-->
+		
 			
 
 
 		</div>
 	</div>
-	<!-- END PAGE CONTAINER-->
+
 
 
 	<footer style="background-color:#205b8d;">
@@ -68,3 +68,58 @@
 			<p style="color: white;">Source code : <a href="https://github.com/aniskchaou/ECOMMERCE-FRONTEND-ANGULAR">https://github.com/aniskchaou/ECOMMERCE-FRONTEND-ANGULAR</a></p>
 		</ul>
 	</footer>
+-->
+
+
+<!-- Preloader -->
+<!-- End Preloader -->
+
+
+<!-- Header -->
+<app-header></app-header>
+<!--/ End Header -->
+
+<!-- Slider Area -->
+
+<!--/ End Slider Area -->
+
+<!-- Start Small Banner  -->
+
+<!-- End Small Banner -->
+
+<!-- Start Product Area -->
+<router-outlet></router-outlet>
+<!-- End Product Area -->
+
+<!-- Start Midium Banner  -->
+
+<!-- End Midium Banner -->
+<br><br>
+<!-- Start Most Popular -->
+
+<!-- End Most Popular Area -->
+
+<!-- Start Shop Home List  -->
+<app-shop-home></app-shop-home>
+<!-- End Shop Home List  -->
+
+<!-- Start Cowndown Area -->
+<app-count-down></app-count-down>
+<!-- /End Cowndown Area -->
+
+<!-- Start Shop Blog  -->
+
+<!-- End Shop Blog  -->
+
+<!-- Start Shop Services Area -->
+<app-service></app-service>
+<!-- End Shop Services Area -->
+
+<!-- Start Shop Newsletter  -->
+<app-newsletter></app-newsletter>
+<!-- End Shop Newsletter -->
+
+<!-- Modal -->
+<app-modal></app-modal>
+<!-- Modal end -->
+<app-footer></app-footer>

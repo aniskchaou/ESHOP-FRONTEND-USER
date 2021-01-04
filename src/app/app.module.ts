@@ -18,17 +18,32 @@ import { CartDetailsComponent } from './components/cart-details/cart-details.com
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
 
+import { HeaderComponent } from './components/header/header.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { BannerComponent } from './banner/banner.component';
+import { ProductAreaComponent } from './components/product-area/product-area.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MediumBannerComponent } from './components/medium-banner/medium-banner.component';
+import { PopularComponent } from './components/popular/popular.component';
+import { ShopHomeComponent } from './components/shop-home/shop-home.component';
+import { CountDownComponent } from './components/count-down/count-down.component';
+import { ShopBlogComponent } from './components/shop-blog/shop-blog.component';
+import { ServiceComponent } from './components/service/service.component';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { ShopGridComponent } from './components/shop-grid/shop-grid.component';
+
 //routes
 const routes:Routes=[
-  {path:'search/:keyword',component:ProductsListComponent},
+  {path:'search/:keyword',component:ProductAreaComponent},
   {path:'checkout',component:CheckoutComponent},
   {path:'cart-details',component:CartDetailsComponent},
   {path:'products/:id',component:ProductDetailsComponent},
-  {path:'category/:id',component:ProductsListComponent},
-  {path:'category',component:ProductsListComponent},
-  {path:'products',component:ProductsListComponent},
-  {path:'',redirectTo:'/products',pathMatch:'full'},
-  {path:'**',redirectTo:'/products',pathMatch:'full'}]
+  {path:'category/:id',component:ProductAreaComponent},
+  {path:'category',component:ProductAreaComponent},
+  {path:'home',component:ProductAreaComponent},
+  {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'**',redirectTo:'home',pathMatch:'full'}]
 
 
 @NgModule({
@@ -40,7 +55,21 @@ const routes:Routes=[
     CartStatusComponent,
     CartDetailsComponent,
     CheckoutComponent,
-    SearchComponent
+    SearchComponent,
+    FooterComponent,
+    HeaderComponent,
+    SliderComponent,
+    BannerComponent,
+    ProductAreaComponent,
+    MediumBannerComponent,
+    PopularComponent,
+    ShopHomeComponent,
+    CountDownComponent,
+    ShopBlogComponent,
+    ServiceComponent,
+    NewsletterComponent,
+    ModalComponent,
+    ShopGridComponent
   ],
   imports: [ //modules
     BrowserModule,

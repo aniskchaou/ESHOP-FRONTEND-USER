@@ -74,5 +74,7 @@ export class CartService {
 
     this.totalPrice.next(totalPriceValue);
     this.totalQuantity.next(totalQuantityValue);
+
+    console.log(this.totalQuantity);
   }
 }

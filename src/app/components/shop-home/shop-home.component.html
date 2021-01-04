@@ -1,0 +1,105 @@
+<section class="shop-home-list section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="shop-section-title">
+							<h1>On sale</h1>
+						</div>
+					</div>
+				</div>
+				<!-- Start Single List  -->
+				<div class="single-list" *ngFor="let p of products">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-12">
+							<div class="list-image overlay">
+								<img src="{{ p.imageUrl }}" alt="#">
+								<a routerLink="/products/{{ p.id }}" class="buy"><i class="fa fa-shopping-bag"></i></a>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-12 no-padding">
+							<div class="content">
+								<h4 class="title"><a routerLink="/products/{{ p.id }}">{{ p.name }}</a></h4>
+								<p class="price with-discount">${{ p.unitPrice }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single List  -->
+				<!-- Start Single List  -->
+			
+				<!-- End Single List  -->
+				<!-- Start Single List  -->
+		
+				<!-- End Single List  -->
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="shop-section-title">
+							<h1>Best Seller</h1>
+						</div>
+					</div>
+				</div>
+				<!-- Start Single List  -->
+				<div class="single-list" *ngFor="let p of products">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-12">
+							<div class="list-image overlay">
+								<img src="{{ p.imageUrl }}" alt="#">
+								<a routerLink="/products/{{ p.id }}" class="buy"><i class="fa fa-shopping-bag"></i></a>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-12 no-padding">
+							<div class="content">
+								<h5 class="title"><a routerLink="/products/{{ p.id }}">{{ p.name }}</a></h5>
+								<p class="price with-discount">${{ p.unitPrice }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single List  -->
+				<!-- Start Single List  -->
+			
+				<!-- End Single List  -->
+				<!-- Start Single List  -->
+			
+				<!-- End Single List  -->
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="shop-section-title">
+							<h1>Top viewed</h1>
+						</div>
+					</div>
+				</div>
+				<!-- Start Single List  -->
+				<div class="single-list" *ngFor="let p of products">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-12">
+							<div class="list-image overlay">
+								<img src="{{ p.imageUrl }}" alt="#">
+								<a routerLink="/products/{{ p.id }}" class="buy"><i class="fa fa-shopping-bag"></i></a>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-12 no-padding">
+							<div class="content">
+								<h5 class="title"><a routerLink="/products/{{ p.id }}">{{ p.name }}</a></h5>
+								<p class="price with-discount">${{ p.unitPrice }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single List  -->
+				<!-- Start Single List  -->
+				
+				<!-- End Single List  -->
+				<!-- Start Single List  -->
+			
+				<!-- End Single List  -->
+			</div>
+		</div>
+	</div>
+</section>

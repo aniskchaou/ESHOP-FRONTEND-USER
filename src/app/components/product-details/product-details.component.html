@@ -1,21 +1,33 @@
-<div class="container-fluid">
-  <div class="row">
 
-    
-    <div *ngIf="!product">
-      <img src="assets/loading.gif" height="100" width="100" />
-    </div>
-   
-    <div>
-      <img src="{{ product.imageUrl }}" class="img-responsive" width="200px" />
-      <h3>{{ product.name }}</h3>
-      <div class="price">$ {{ product.unitPrice }}</div>
-      <a (click)="addToCart(product.id)" class="primary-btn">Add to cart</a>
-      <p>{{ product.description }}</p>
-      <br /><br />
-      <a routerLink="/products">Back to Product List</a>
-    </div>
+<section class="cown-down" *ngIf="product">
+	<div class="section-inner ">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6 col-12 padding-right">
+					<div class="image">
+						<img src="{{ product.imageUrl }}" alt="#">
+					</div>	
+				</div>	
+				<div class="col-lg-6 col-12 padding-left">
+					<div class="content">
+						<div style="padding: 15px;">
+							<h3 class="title">{{ product.name }}n</h3>
+							<p class="text">{{ product.description }}</p>
+							<h1 class="price">$ {{ product.unitPrice }}</h1>
+							<br><br>
+							<div class="button">
+								<a  (click)="addToCart(product)" class="btn">Add to cart</a>
+							</div>
+							
+							<br><br>
+						</div>
+					</div>	
+				</div>	
+			</div>
+		</div>
+	</div>
+</section>
 
-
-  </div>
+<div *ngIf="!product">
+  <img src="assets/loading.gif" height="100" width="100" />
 </div>

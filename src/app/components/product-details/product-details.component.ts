@@ -33,6 +33,7 @@ export class ProductDetailsComponent implements OnInit {
   addToCart(product:Product)
   {
     const theCartItem=new CartItem(product)
+    console.log(theCartItem)
     this.cartService.addToCart(theCartItem);
   }
 
