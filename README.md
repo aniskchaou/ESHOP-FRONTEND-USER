@@ -1,13 +1,20 @@
+# ShopCart
+ShopCart is an e-commerce web application for selling products online.
+
+## Informations:
+Status: under development
+Lastest version 1.0
+Sector: ecommerce
+Created: September 2020
+Last updated: September 2020
+
+
 ## Screenshot
 <p align="center">
 <img src="intro.jpg" />
 </p>
 <br>
 
-
-## Description
-
-The objective of this project is developing a simple e-commerce web application.
 
 ## Features
 
